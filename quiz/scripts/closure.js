@@ -4,6 +4,7 @@ function setColor(set) {
             if(changeColor) {
             let userColor = document.getElementById('color').value;
             document.getElementById('myPara').style.color = userColor;
+            console.log('coloring');
         }
     }
 }
@@ -11,4 +12,5 @@ function setColor(set) {
 window.onload = function() {
     let toggle = true;
     document.getElementById('btn').onclick = setColor(toggle);
+    console.log('test');
 }
