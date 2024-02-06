@@ -24,6 +24,18 @@
       // Using map to calculate the square root of each number
       // Use Math.sqrt(number) to calculate sq root
       const squareRoots = numbers.map(number => {
+        try {
+          if(isNaN(number)) {
+            throw new Error('Please enter a number');
+            if(number < 0) {
+              throw new Error('Please enter a positive number');
+            }
+            return Math.sqrt(number);
+          }
+        } catch (error) {
+          console.log(error);
+          return NaN;
+        }
         return 0
     });
 
